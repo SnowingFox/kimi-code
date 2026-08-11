@@ -1,5 +1,25 @@
 # @moonshot-ai/kimi-code
 
+## 0.34.1
+
+### Patch Changes
+
+- [#2731](https://github.com/MoonshotAI/kimi-code/pull/2731) [`437a1b8`](https://github.com/MoonshotAI/kimi-code/commit/437a1b8ba1b7e0f6662bdadc669564fdc58c3f5a) Thanks [@pvzheroes125](https://github.com/pvzheroes125)! - Detect MCP servers that require OAuth by reusing the existing connection-time authorization check.
+
+- [#2699](https://github.com/MoonshotAI/kimi-code/pull/2699) [`c0b61c6`](https://github.com/MoonshotAI/kimi-code/commit/c0b61c6e558521fd003de786cad150a3aeb01667) Thanks [@sailist](https://github.com/sailist)! - Fix the token counts reported after compaction reading far below the real context size: the before/after stats and the context gauge now include the system prompt and tool definitions, matching the numbers shown while the session runs.
+
+- [#2810](https://github.com/MoonshotAI/kimi-code/pull/2810) [`64abebc`](https://github.com/MoonshotAI/kimi-code/commit/64abebc95a13b066fefc4f96b062824ea5ec996b) Thanks [@huangzheng2016](https://github.com/huangzheng2016)! - Fix multi-select "Other" options so they can be deselected after being committed.
+
+- [#2701](https://github.com/MoonshotAI/kimi-code/pull/2701) [`7cd6476`](https://github.com/MoonshotAI/kimi-code/commit/7cd64766c8eeff30f3de4bd6467870555d9440db) Thanks [@sailist](https://github.com/sailist)! - Fix multi-second typing and rendering freezes at startup or while idle when a large search index loads, replays, or rebuilds.
+
+- [#2814](https://github.com/MoonshotAI/kimi-code/pull/2814) [`158c81d`](https://github.com/MoonshotAI/kimi-code/commit/158c81d7055587d582ca424f9b913426fca42559) Thanks [@huangzheng2016](https://github.com/huangzheng2016)! - Show a clear error message on Windows when Git for Windows is not installed, instead of exiting silently.
+
+- [#2740](https://github.com/MoonshotAI/kimi-code/pull/2740) [`01c74e9`](https://github.com/MoonshotAI/kimi-code/commit/01c74e9372fcbbbe99614e859b53b505ed1664a8) Thanks [@oocz](https://github.com/oocz)! - Prevent one session's subagent tool projection from changing builtin profiles in later sessions.
+
+- [#2723](https://github.com/MoonshotAI/kimi-code/pull/2723) [`e702817`](https://github.com/MoonshotAI/kimi-code/commit/e7028171244789aff58f93da80d477ce3afc939a) Thanks [@sailist](https://github.com/sailist)! - Fix a spurious "Failed to steer" error when sending a message while a goal run is between turns.
+
+- [#2695](https://github.com/MoonshotAI/kimi-code/pull/2695) [`71ff2a0`](https://github.com/MoonshotAI/kimi-code/commit/71ff2a0fffb2ebf399194436ef2d4b599c9988ad) Thanks [@sailist](https://github.com/sailist)! - Fix a Windows binary-planting risk: child processes spawned by bare command name before the workspace trust prompt (stty, fd detection, package-manager update installs) could resolve to a malicious executable placed in the current directory. These commands are now skipped on Windows, deferred until after the trust prompt, or resolved to an absolute PATH location with hits inside the current directory refused.
+
 ## 0.34.0
 
 ### Minor Changes
